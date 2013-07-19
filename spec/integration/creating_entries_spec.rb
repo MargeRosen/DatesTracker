@@ -13,4 +13,4 @@ feature 'Creating Entries' do
     click_button 'Create Entry'
     page.should have_content('Entry has been created.')
   end
-end
+
