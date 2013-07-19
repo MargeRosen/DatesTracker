@@ -1,8 +1,9 @@
-<%= link_to "New Entry", new_entry_path %>
+<%= link_to "New Entry", new_entry_path %><br><br>
 
-<h2>Entries</h2>
+<h2>Date Entries</h2>
 <ul>
   <% @entries.each do |entry| %>
-    <li><%= link_to entry.event, entry %></li>
+    <li><%= link_to entry.event, entry %>  <%= entry.description %></li>
+
   <% end %>
 </ul>

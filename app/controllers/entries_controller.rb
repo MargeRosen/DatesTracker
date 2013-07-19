@@ -21,5 +21,16 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
   end
 
+  def edit
+    @entry = Entry.find(params[:id])
+  end
+
+  def update
+    @entry = Entry.find(params[:id])
+    @entry.update_attributes(params[:entry])
+    flash[:notice] = "Entry has been updated."
+    redirect_to @entry
+  end
+
 
 end
