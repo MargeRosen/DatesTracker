@@ -1,0 +1,12 @@
+<h2>New Entry</h2>
+<%= form_for(@entry) do |f| %>
+  <p>
+    <%= f.label :event %><br />
+    <%= f.datetime_select :event %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
