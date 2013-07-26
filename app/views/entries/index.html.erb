@@ -4,6 +4,8 @@
 <ul>
   <% @entries.each do |entry| %>
     <li><%= link_to entry.event, entry %>  <%= entry.description %></li>
-
+    <%= link_to 'Show', entry %><br>
+    <%= link_to 'Edit', edit_entry_path(entry) %><br>
+    <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %><br>
   <% end %>
 </ul>
